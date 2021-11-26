@@ -35,6 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    flavorDimensions "default"
+    productFlavors {
+        qa {
+            buildConfigField "String", "API_BASE_URL", '"http://api.nytimes.com/"'
+        }
+    }
 }
 
 dependencies {
