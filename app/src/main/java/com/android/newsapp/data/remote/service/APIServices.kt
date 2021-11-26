@@ -1,5 +1,7 @@
 package com.android.newsapp.data.remote.service
 
+import com.android.newsapp.data.model.NewsEntity
+import com.android.newsapp.data.remote.helper.APIResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -24,5 +26,5 @@ interface APIServices {
     suspend fun getNewsList(
         @Query(API_KEY) apiKey: String,
         @Path(PERIOD) period: Int
-    ): Response<Any>
+    ): Response<APIResponse<NewsEntity>>
 }
