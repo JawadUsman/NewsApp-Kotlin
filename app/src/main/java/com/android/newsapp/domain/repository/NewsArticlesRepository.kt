@@ -29,7 +29,10 @@ class NewsArticlesRepository @Inject constructor(private val newsDataSource: New
                     val newsArticleList: List<NewsArticle> = currencyList.results.map {
                         it.toNewsList()
                     }
-                    APIResult.success(newsArticleList)
+                    if (newsArticleList.isNotEmpty())
+                        APIResult.success(newsArticleList)
+                    else
+                        APIResult.error("No news article found")
                 } ?: run {
                     APIResult.error("No data found")
                 }
