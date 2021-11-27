@@ -2,7 +2,10 @@ package com.android.newsapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.VisibleForTesting
+import androidx.test.espresso.IdlingResource
 import com.android.newsapp.R
+import com.android.newsapp.util.EspressoIdlingResource
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -19,4 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    val countingIdlingResource: IdlingResource
+        @VisibleForTesting
+        get() = EspressoIdlingResource.idlingResource
 }

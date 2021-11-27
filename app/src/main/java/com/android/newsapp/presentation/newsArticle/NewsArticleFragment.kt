@@ -11,6 +11,7 @@ import com.android.newsapp.presentation.invisible
 import com.android.newsapp.presentation.newsArticle.adapter.NewsArticleAdapter
 import com.android.newsapp.presentation.newsArticle.viewModel.NewsArticleViewModel
 import com.android.newsapp.presentation.visible
+import com.android.newsapp.util.EspressoIdlingResource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_news_article.view.*
 import javax.inject.Inject
@@ -26,11 +27,6 @@ class NewsArticleFragment : BaseFragment() {
     override val layoutId: Int
         get() = R.layout.fragment_news_article
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        loadNewsArticleList()
-    }
-
     /**
      * Initialize Presenter methods
      *
@@ -42,6 +38,7 @@ class NewsArticleFragment : BaseFragment() {
         setToolbarMenu(view)
         view.rvNewsArticle.adapter = newsArticleAdapter
         subscribeUI(view)
+        loadNewsArticleList()
     }
 
     private fun setToolbarMenu(view: View) {
@@ -100,6 +97,7 @@ class NewsArticleFragment : BaseFragment() {
                 }
             }
             getNewsArticle.observe(viewLifecycleOwner) {
+                EspressoIdlingResource.decrement()
                 view.rvNewsArticle.visible()
                 newsArticleAdapter.listItem = it
             }

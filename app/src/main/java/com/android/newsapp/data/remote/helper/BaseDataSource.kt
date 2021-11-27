@@ -34,7 +34,7 @@ abstract class BaseDataSource constructor(
                             error("Network call has failed for a following reason: $errorResponse")
                         }
                         else -> {
-                            error("Server error")
+                            error("Sorry, something went wrong")
                         }
                     }
                 }

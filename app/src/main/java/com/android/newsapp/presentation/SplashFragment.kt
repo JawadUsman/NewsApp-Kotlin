@@ -7,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import com.android.newsapp.util.EspressoIdlingResource
 
 
 class SplashFragment : BaseFragment() {
@@ -21,7 +22,7 @@ class SplashFragment : BaseFragment() {
      * @param view
      */
     override fun initializePresenter(view: View) {
-
+        EspressoIdlingResource.increment()
     }
 
     override fun onResume() {
@@ -34,6 +35,7 @@ class SplashFragment : BaseFragment() {
      */
     private fun navigateToHomeScreen() {
         Handler(Looper.myLooper()!!).postDelayed({
+            EspressoIdlingResource.decrement()
             val action = SplashFragmentDirections.actionSplashFragmentToNewsArticleFragment()
             lifecycleScope.launchWhenResumed {
                 findNavController().navigate(action)

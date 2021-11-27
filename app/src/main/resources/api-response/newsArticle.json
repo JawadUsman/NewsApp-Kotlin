@@ -1,0 +1,327 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2021 The New York Times Company.  All Rights Reserved.",
+  "num_results": 20,
+  "results": [
+    {
+      "uri": "nyt://article/24a4ebe1-f101-5992-94b9-391b3ec0826b",
+      "url": "https://www.nytimes.com/2021/11/11/well/family/dog-insomnia-sleep-effects.html",
+      "id": 100000008073311,
+      "asset_id": 100000008073311,
+      "source": "New York Times",
+      "published_date": "2021-11-11",
+      "updated": "2021-11-16 09:03:10",
+      "section": "Well",
+      "subsection": "Family",
+      "nytdsection": "well",
+      "adx_keywords": "Content Type: Service;Animal Behavior;Dogs;Sleep;Pets;internal-sub-only-nl",
+      "column": null,
+      "byline": "By Tara Parker-Pope",
+      "type": "Article",
+      "title": "Does ‘Dogsomnia’ Keep You Up at Night?",
+      "abstract": "Although the scientific literature makes a compelling case that our pets are good for us in many ways, research into the effects of co-sleeping is more limited.",
+      "des_facet": [
+        "Content Type: Service",
+        "Animal Behavior",
+        "Dogs",
+        "Sleep",
+        "Pets",
+        "internal-sub-only-nl"
+      ],
+      "org_facet": [
+
+      ],
+      "per_facet": [
+
+      ],
+      "geo_facet": [
+
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Illustration by Nicolas Ortega; Photograph via Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2021/11/16/well/11Well-NL-DOG-SLEEP/11Well-NL-DOG-SLEEP-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/16/well/11Well-NL-DOG-SLEEP/11Well-NL-DOG-SLEEP-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/16/well/11Well-NL-DOG-SLEEP/11Well-NL-DOG-SLEEP-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/25f68440-e0e7-5141-93ed-f281502e3c74",
+      "url": "https://www.nytimes.com/2021/11/08/sports/football/aaron-rodgers-vaccine.html",
+      "id": 100000008066323,
+      "asset_id": 100000008066323,
+      "source": "New York Times",
+      "published_date": "2021-11-08",
+      "updated": "2021-11-14 16:49:46",
+      "section": "Sports",
+      "subsection": "N.F.L.",
+      "nytdsection": "sports",
+      "adx_keywords": "Vaccination and Immunization;Coronavirus (2019-nCoV);Football;Rumors and Misinformation;audio-neutral-informative;Rodgers, Aaron;Green Bay Packers;National Football League;National Football League Players Assn",
+      "column": null,
+      "byline": "By Ken Belson and Emily Anthes",
+      "type": "Article",
+      "title": "Scientists Fight a New Source of Vaccine Misinformation: Aaron Rodgers",
+      "abstract": "The Green Bay Packers quarterback, one of the most visible athletes in the country, last week used anti-vaccination rhetoric as his reasoning for not getting vaccinated against Covid-19.",
+      "des_facet": [
+        "Vaccination and Immunization",
+        "Coronavirus (2019-nCoV)",
+        "Football",
+        "Rumors and Misinformation",
+        "audio-neutral-informative"
+      ],
+      "org_facet": [
+        "Green Bay Packers",
+        "National Football League",
+        "National Football League Players Assn"
+      ],
+      "per_facet": [
+        "Rodgers, Aaron"
+      ],
+      "geo_facet": [
+
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "In an interview last week, Rodgers said he followed his own “immunization protocol,” though he did not provide details about what it entailed. ",
+          "copyright": "Christian Petersen/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2021/11/08/sports/08nfl-unvaxxed-1/08nfl-unvaxxed-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/08/sports/08nfl-unvaxxed-1/merlin_196977462_c579a26a-e05f-41c3-8fc3-e026ac00f458-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/08/sports/08nfl-unvaxxed-1/merlin_196977462_c579a26a-e05f-41c3-8fc3-e026ac00f458-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/371bec49-e869-5dba-bfd9-f40a29f34a95",
+      "url": "https://www.nytimes.com/2021/10/27/well/live/covid-booster-shot-mix-and-match.html",
+      "id": 100000008044714,
+      "asset_id": 100000008044714,
+      "source": "New York Times",
+      "published_date": "2021-10-27",
+      "updated": "2021-11-09 15:13:33",
+      "section": "Well",
+      "subsection": "Live",
+      "nytdsection": "well",
+      "adx_keywords": "Vaccination and Immunization;Content Type: Service;Drugs (Pharmaceuticals);Coronavirus (2019-nCoV);Immune System",
+      "column": null,
+      "byline": "By Tara Parker-Pope",
+      "type": "Article",
+      "title": "Should I Mix or Match My Booster Shot?",
+      "abstract": "Health officials approved mix-and-match Covid booster shots, but didn’t say whether it’s better to switch vaccines or stick with your original shot.",
+      "des_facet": [
+        "Vaccination and Immunization",
+        "Content Type: Service",
+        "Drugs (Pharmaceuticals)",
+        "Coronavirus (2019-nCoV)",
+        "Immune System"
+      ],
+      "org_facet": [
+
+      ],
+      "per_facet": [
+
+      ],
+      "geo_facet": [
+
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Hazem Bader/Agence France-Presse \u0026mdash; Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2021/11/02/well/27boosters/27boosters-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/02/well/27boosters/27boosters-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/02/well/27boosters/27boosters-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/828606f1-1e21-5aae-a91e-cdd0555573d5",
+      "url": "https://www.nytimes.com/2021/10/29/style/modern-love-23andme-family-secret.html",
+      "id": 100000008042584,
+      "asset_id": 100000008042584,
+      "source": "New York Times",
+      "published_date": "2021-10-29",
+      "updated": "2021-11-07 08:52:53",
+      "section": "Style",
+      "subsection": "",
+      "nytdsection": "style",
+      "adx_keywords": "Love (Emotion);Genetics and Heredity;Families and Family Life;23andMe",
+      "column": null,
+      "byline": "By Kama Einhorn",
+      "type": "Article",
+      "title": "A Stranger Looked Like My Twin. That Was Just the Beginning.",
+      "abstract": "How a family secret was unraveled by 23andMe.",
+      "des_facet": [
+        "Love (Emotion)",
+        "Genetics and Heredity",
+        "Families and Family Life"
+      ],
+      "org_facet": [
+        "23andMe"
+      ],
+      "per_facet": [
+
+      ],
+      "geo_facet": [
+
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Brian Rea",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2021/10/31/fashion/31MODERN-23ME/31MODERN-23ME-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/10/31/fashion/31MODERN-23ME/31MODERN-23ME-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/10/31/fashion/31MODERN-23ME/31MODERN-23ME-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/fe2ca276-72f6-561c-a3d8-d1a1acf0d73c",
+      "url": "https://www.nytimes.com/2021/11/09/business/media/brian-williams-msnbc.html",
+      "id": 100000008068769,
+      "asset_id": 100000008068769,
+      "source": "New York Times",
+      "published_date": "2021-11-09",
+      "updated": "2021-11-10 16:40:18",
+      "section": "Business",
+      "subsection": "Media",
+      "nytdsection": "business",
+      "adx_keywords": "News and News Media;Television;Appointments and Executive Changes;Williams, Brian;MSNBC;NBC News",
+      "column": null,
+      "byline": "By Michael M. Grynbaum",
+      "type": "Article",
+      "title": "Brian Williams Says He’s Leaving NBC News",
+      "abstract": "The former anchor of “NBC Nightly News” rehabilitated his tarnished image as the host of a popular 11 p.m. show on MSNBC.",
+      "des_facet": [
+        "News and News Media",
+        "Television",
+        "Appointments and Executive Changes"
+      ],
+      "org_facet": [
+        "MSNBC",
+        "NBC News"
+      ],
+      "per_facet": [
+        "Williams, Brian"
+      ],
+      "geo_facet": [
+
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Brian Williams spent 28 years at NBC News, including more than a decade as the anchor of the main network newscast.",
+          "copyright": "Monica Schipper/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2021/11/10/business/09JPmsnbc-print/09msnbc-1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/10/business/09JPmsnbc-print/merlin_92097107_261e2104-1e2f-4ba1-bdfd-9880c4527f83-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2021/11/10/business/09JPmsnbc-print/merlin_92097107_261e2104-1e2f-4ba1-bdfd-9880c4527f83-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    }
+  ]
+}
