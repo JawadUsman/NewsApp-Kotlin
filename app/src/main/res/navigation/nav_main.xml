@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.android.newsapp.presentation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_newsArticleFragment"
+            app:destination="@id/newsArticleFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsArticleFragment"
+        android:name="com.android.newsapp.presentation.newsArticle.NewsArticleFragment"
+        android:label="fragment_news_article"
+        tools:layout="@layout/fragment_news_article">
+        <action
+            android:id="@+id/action_newsArticleFragment_to_newsArticleDetailsFragment"
+            app:destination="@id/newsArticleDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsArticleDetailsFragment"
+        android:name="com.android.newsapp.presentation.newsArticleDetails.NewsArticleDetailsFragment"
+        android:label="fragment_news_article_details"
+        tools:layout="@layout/fragment_news_article_details">
+        <argument
+            android:name="new_article_details"
+            app:argType="com.android.newsapp.domain.model.NewsArticle" />
+    </fragment>
+</navigation>

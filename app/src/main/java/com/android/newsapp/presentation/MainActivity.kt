@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.android.newsapp.R
 
 /**
- * The class MainActivity
+ * The class MainActivity (Host Activity)
  *
  * @author Jawad Usman
  * @web www.jawadusman.com
