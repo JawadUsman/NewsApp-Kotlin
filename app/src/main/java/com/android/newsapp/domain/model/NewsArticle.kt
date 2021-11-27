@@ -15,6 +15,7 @@ import kotlinx.android.parcel.Parcelize
  */
 @Parcelize
 data class NewsArticle(
+    val id: Long,
     val title: String,
     @SerializedName("abstract")
     val abstractValue: String,
