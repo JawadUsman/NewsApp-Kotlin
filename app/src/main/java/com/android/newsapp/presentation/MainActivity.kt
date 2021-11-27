@@ -3,6 +3,7 @@ package com.android.newsapp.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.newsapp.R
+import com.android.newsapp.presentation.base.BaseFragment
 
 /**
  * The class MainActivity (Host Activity)
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as BaseFragment).onBackPressed()
         super.onBackPressed()
     }
 }
