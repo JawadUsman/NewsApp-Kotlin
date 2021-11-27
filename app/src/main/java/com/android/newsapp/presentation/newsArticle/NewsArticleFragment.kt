@@ -29,7 +29,7 @@ class NewsArticleFragment : BaseFragment() {
      * @param view
      */
     override fun initializePresenter(view: View) {
-
+        subscribeUI(view)
     }
 
     /**
@@ -40,7 +40,22 @@ class NewsArticleFragment : BaseFragment() {
      * @param view
      */
     private fun subscribeUI(view: View) {
+        with(newsArticleViewModel) {
+            getAPIMessage.observe(viewLifecycleOwner) {
+                it.getContentIfNotHandled()?.let {
 
+                }
+            }
+
+            getProgressStatus.observe(viewLifecycleOwner) {
+                it.getContentIfNotHandled()?.let {
+
+                }
+            }
+            getNewsArticle.observe(viewLifecycleOwner) {
+
+            }
+        }
     }
 
     private fun loadMoviesList() {
