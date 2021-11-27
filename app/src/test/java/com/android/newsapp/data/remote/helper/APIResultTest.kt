@@ -3,7 +3,6 @@ package com.android.newsapp.data.remote.helper
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.hamcrest.core.IsInstanceOf.instanceOf
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -19,10 +18,6 @@ import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class APIResultTest {
-
-    @Before
-    fun setUp() {
-    }
 
     @Test
     fun `APIResult should return same instance for success type`() {
