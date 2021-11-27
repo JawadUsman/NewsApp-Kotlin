@@ -1,6 +1,6 @@
 package com.android.newsapp.data.model
 
-import com.android.newsapp.domain.model.News
+import com.android.newsapp.domain.model.NewsArticle
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -37,5 +37,5 @@ data class NewsEntity(
     val url: String
 ) {
     fun toNewsList() =
-        News(title, abstractValue, adx_keywords, published_date, byline, source, url, media)
+        NewsArticle(title, abstractValue, adx_keywords, published_date, byline, source, url, media)
 }

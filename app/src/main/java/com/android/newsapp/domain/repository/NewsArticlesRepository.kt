@@ -2,7 +2,7 @@ package com.android.newsapp.domain.repository
 
 import com.android.newsapp.data.remote.dataSource.NewsDataSource
 import com.android.newsapp.data.remote.helper.APIResult
-import com.android.newsapp.domain.model.News
+import com.android.newsapp.domain.model.NewsArticle
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -21,12 +21,12 @@ class NewsArticlesRepository @Inject constructor(private val newsDataSource: New
      * returns News Article list from the server
      * @param period
      */
-    suspend fun getNewsArticle(period: Int): APIResult<List<News>> {
+    suspend fun getNewsArticle(period: Int): APIResult<List<NewsArticle>> {
         return try {
             val response = newsDataSource.geNewsList("", period)
             if (response.status == APIResult.Status.SUCCESS) {
                 response.data?.let { currencyList ->
-                    val newsArticleList: List<News> = currencyList.results.map {
+                    val newsArticleList: List<NewsArticle> = currencyList.results.map {
                         it.toNewsList()
                     }
                     APIResult.success(newsArticleList)

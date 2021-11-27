@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName
  * @version 1.0
  * @since 26 Nov 2021
  */
-data class News(
+data class NewsArticle(
     val title: String,
     @SerializedName("abstract")
     val abstractValue: String,
