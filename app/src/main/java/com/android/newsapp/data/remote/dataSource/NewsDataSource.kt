@@ -19,7 +19,7 @@ class NewsDataSource @Inject constructor(
 ) : BaseDataSource(networkHandler) {
 
     suspend fun geNewsList(apiKey: String, period: Int) = getResult {
-        apiServices.getNewsList(apiKey, period)
+        apiServices.getNewsList(period, apiKey)
     }
 
 }

@@ -3,8 +3,9 @@ package com.android.newsapp.presentation.newsArticleDetails
 import android.view.View
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class NewsArticleDetailsFragment : BaseFragment() {
 
     override val layoutId: Int

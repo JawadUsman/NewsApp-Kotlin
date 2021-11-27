@@ -16,8 +16,14 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 fun ImageView.loadImage(url: String) =
     Glide.with(this.context.applicationContext)
-    .load(url).transition(DrawableTransitionOptions.withCrossFade())
-    .into(this)
+        .load(url).transition(DrawableTransitionOptions.withCrossFade())
+        .into(this)
+
+fun ImageView.loadImageInRoundShape(url: String) =
+    Glide.with(this.context.applicationContext)
+        .load(url).transition(DrawableTransitionOptions.withCrossFade())
+        .circleCrop()
+        .into(this)
 
 fun View.isVisible() = this.visibility == View.VISIBLE
 

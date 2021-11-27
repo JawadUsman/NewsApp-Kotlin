@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * The class MainActivity (Host Activity)
@@ -13,6 +14,7 @@ import com.android.newsapp.presentation.base.BaseFragment
  * @version 1.0
  * @since 26 Nov 2021
  */
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

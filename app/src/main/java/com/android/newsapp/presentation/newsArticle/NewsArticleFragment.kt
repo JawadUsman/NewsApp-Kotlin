@@ -1,12 +1,25 @@
 package com.android.newsapp.presentation.newsArticle
 
+import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import com.android.newsapp.presentation.newsArticle.viewModel.NewsArticleViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NewsArticleFragment : BaseFragment() {
+
+    private val newsArticleViewModel: NewsArticleViewModel by viewModels()
+
     override val layoutId: Int
         get() = R.layout.fragment_news_article
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        loadMoviesList()
+    }
 
     /**
      * Initialize Presenter methods
@@ -28,5 +41,11 @@ class NewsArticleFragment : BaseFragment() {
      */
     private fun subscribeUI(view: View) {
 
+    }
+
+    private fun loadMoviesList() {
+//        emptyView.invisible()
+//        movieList.visible()
+        newsArticleViewModel.loadNewsArticle(7)
     }
 }

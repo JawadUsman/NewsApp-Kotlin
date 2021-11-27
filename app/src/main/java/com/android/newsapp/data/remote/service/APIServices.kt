@@ -24,7 +24,7 @@ interface APIServices {
 
     @GET(NEWS_LIST)
     suspend fun getNewsList(
-        @Query(API_KEY) apiKey: String,
-        @Path(PERIOD) period: Int
+        @Path(PERIOD) period: Int,
+        @Query(API_KEY) apiKey: String
     ): Response<APIResponse<NewsEntity>>
 }

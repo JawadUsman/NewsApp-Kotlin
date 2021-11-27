@@ -21,7 +21,7 @@ class SplashFragment : BaseFragment() {
      * @param view
      */
     override fun initializePresenter(view: View) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onResume() {

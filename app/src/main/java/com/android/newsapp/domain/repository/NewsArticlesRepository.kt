@@ -23,7 +23,7 @@ class NewsArticlesRepository @Inject constructor(private val newsDataSource: New
      */
     suspend fun getNewsArticle(period: Int): APIResult<List<NewsArticle>> {
         return try {
-            val response = newsDataSource.geNewsList("", period)
+            val response = newsDataSource.geNewsList("KKUW6dh8QfamdxW5CUckOGu3q1QViDif", period)
             if (response.status == APIResult.Status.SUCCESS) {
                 response.data?.let { currencyList ->
                     val newsArticleList: List<NewsArticle> = currencyList.results.map {
