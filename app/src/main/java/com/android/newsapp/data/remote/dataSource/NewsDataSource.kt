@@ -17,7 +17,9 @@ class NewsDataSource @Inject constructor(
     networkHandler: NetworkHandler,
     private val apiServices: APIServices
 ) : BaseDataSource(networkHandler) {
+
     suspend fun geNewsList(apiKey: String, period: Int) = getResult {
         apiServices.getNewsList(apiKey, period)
     }
+
 }
