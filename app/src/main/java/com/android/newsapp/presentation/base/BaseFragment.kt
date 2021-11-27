@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import com.android.newsapp.presentation.MainActivity
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * The class BaseFragment
@@ -36,6 +39,10 @@ abstract class BaseFragment : Fragment(), BaseView {
         super.onPause()
         hideKeyboard()
     }
+
+    internal fun showSnackBar(message: String) =
+        Snackbar.make((activity as MainActivity).nav_host_fragment, message, Snackbar.LENGTH_SHORT)
+            .show()
 
     private fun hideKeyboard() {
         requireActivity().currentFocus?.let {

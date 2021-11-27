@@ -48,14 +48,26 @@ class NewsArticleFragment : BaseFragment() {
     private fun subscribeUI(view: View) {
         with(newsArticleViewModel) {
             getAPIMessage.observe(viewLifecycleOwner) {
-                it.getContentIfNotHandled()?.let {
-
+                it.getContentIfNotHandled()?.let { message ->
+                    newsArticleAdapter.let { currencyAdapter ->
+                        if (currencyAdapter.itemCount == 0) {
+                            view.tvMessage.visibility = View.VISIBLE
+                            view.tvMessage.text = message
+                        } else {
+                            view.tvMessage.visibility = View.GONE
+                            showSnackBar(message)
+                        }
+                    }
                 }
             }
 
             getProgressStatus.observe(viewLifecycleOwner) {
-                it.getContentIfNotHandled()?.let {
-
+                it.getContentIfNotHandled()?.let { progressStatus ->
+                    if (progressStatus) {
+                        view.pbNewsArticleLoader.visibility = View.VISIBLE
+                    } else {
+                        view.pbNewsArticleLoader.visibility = View.GONE
+                    }
                 }
             }
             getNewsArticle.observe(viewLifecycleOwner) {
