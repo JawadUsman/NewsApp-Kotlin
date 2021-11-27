@@ -33,8 +33,6 @@ abstract class BaseFragment : Fragment(), BaseView {
         return view
     }
 
-    open fun onBackPressed() {}
-
     override fun onPause() {
         super.onPause()
         hideKeyboard()

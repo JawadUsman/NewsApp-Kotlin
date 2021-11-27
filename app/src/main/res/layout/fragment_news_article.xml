@@ -22,8 +22,8 @@
 
     <ProgressBar
         android:id="@+id/pbNewsArticleLoader"
-        android:layout_width="@dimen/_45sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,9 +35,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/greyChateau"
+        android:textSize="@dimen/_12ssp"
         android:visibility="gone"
+        android:text="@string/androidx_startup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

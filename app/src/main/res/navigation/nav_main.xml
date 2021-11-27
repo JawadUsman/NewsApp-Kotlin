@@ -14,7 +14,7 @@
             android:id="@+id/action_splashFragment_to_newsArticleFragment"
             app:destination="@id/newsArticleFragment"
             app:popUpTo="@id/splashFragment"
-            app:popUpToInclusive="false" />
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newsArticleFragment"

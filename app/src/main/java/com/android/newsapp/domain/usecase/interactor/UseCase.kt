@@ -28,12 +28,12 @@ abstract class UseCase<out Type, in Params> where Type : Any {
         onResult: (APIResult<Type>) -> Unit = {}
     ) {
         scope.launch(Dispatchers.Main) {
+            onResult(APIResult.loading())
             val deferred = async(Dispatchers.IO) {
                 run(params)
             }
             onResult(deferred.await())
         }
     }
-
     class None
 }

@@ -5,8 +5,10 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import com.android.newsapp.presentation.invisible
 import com.android.newsapp.presentation.newsArticle.adapter.NewsArticleAdapter
 import com.android.newsapp.presentation.newsArticle.viewModel.NewsArticleViewModel
+import com.android.newsapp.presentation.visible
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_news_article.view.*
 import javax.inject.Inject
@@ -15,6 +17,7 @@ import javax.inject.Inject
 class NewsArticleFragment : BaseFragment() {
 
     private val newsArticleViewModel: NewsArticleViewModel by viewModels()
+
     @Inject
     lateinit var newsArticleAdapter: NewsArticleAdapter
 
@@ -51,10 +54,10 @@ class NewsArticleFragment : BaseFragment() {
                 it.getContentIfNotHandled()?.let { message ->
                     newsArticleAdapter.let { currencyAdapter ->
                         if (currencyAdapter.itemCount == 0) {
-                            view.tvMessage.visibility = View.VISIBLE
+                            view.tvMessage.visible()
                             view.tvMessage.text = message
                         } else {
-                            view.tvMessage.visibility = View.GONE
+                            view.tvMessage.invisible()
                             showSnackBar(message)
                         }
                     }
@@ -64,13 +67,14 @@ class NewsArticleFragment : BaseFragment() {
             getProgressStatus.observe(viewLifecycleOwner) {
                 it.getContentIfNotHandled()?.let { progressStatus ->
                     if (progressStatus) {
-                        view.pbNewsArticleLoader.visibility = View.VISIBLE
+                        view.pbNewsArticleLoader.visible()
                     } else {
-                        view.pbNewsArticleLoader.visibility = View.GONE
+                        view.pbNewsArticleLoader.invisible()
                     }
                 }
             }
             getNewsArticle.observe(viewLifecycleOwner) {
+                view.rvNewsArticle.visible()
                 newsArticleAdapter.listItem = it
             }
         }

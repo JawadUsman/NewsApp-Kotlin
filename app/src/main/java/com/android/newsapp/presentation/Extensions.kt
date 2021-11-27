@@ -1,10 +1,13 @@
 package com.android.newsapp.presentation
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.annotation.LayoutRes
+import com.android.newsapp.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
@@ -17,14 +20,18 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
  * @since 26 Nov 2021
  */
 
-fun ImageView.loadImage(url: String) =
+fun ImageView.loadImage(url: String?) =
     Glide.with(this.context.applicationContext)
         .load(url).transition(DrawableTransitionOptions.withCrossFade())
+        .placeholder(R.color.textGray)
+        .error(R.color.textGray)
         .into(this)
 
-fun ImageView.loadImageInRoundShape(url: String) =
+fun ImageView.loadImageInRoundShape(url: String?) =
     Glide.with(this.context.applicationContext)
         .load(url).transition(DrawableTransitionOptions.withCrossFade())
+        .placeholder(R.drawable.shape_round_gray)
+        .error(R.drawable.shape_round_gray)
         .circleCrop()
         .into(this)
 
