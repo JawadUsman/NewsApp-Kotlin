@@ -1,12 +1,10 @@
 package com.android.newsapp.domain.usecase.interactor
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.android.newsapp.data.remote.helper.APIResult
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers
-import org.junit.Assert
+import org.hamcrest.MatcherAssert
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -23,10 +21,6 @@ import org.junit.runners.JUnit4
 @RunWith(JUnit4::class)
 class UseCaseTest {
 
-    @Rule
-    @JvmField
-    val instantExecutorRule = InstantTaskExecutorRule()
-
     private lateinit var useCase: TestUseCase
 
     @Before
@@ -38,7 +32,7 @@ class UseCaseTest {
     fun `use case should return 'APIResult' of use case type with success status`() {
         val params = MyParams(TYPE_PARAM)
         val result = runBlocking { useCase.run(params) }
-        Assert.assertThat(
+        MatcherAssert.assertThat(
             result,
             CoreMatchers.`is`(APIResult.success(MyType(TYPE_TEST)))
         )
