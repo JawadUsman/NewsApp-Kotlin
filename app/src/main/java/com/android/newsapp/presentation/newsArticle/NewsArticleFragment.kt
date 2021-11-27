@@ -5,20 +5,25 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
+import com.android.newsapp.presentation.newsArticle.adapter.NewsArticleAdapter
 import com.android.newsapp.presentation.newsArticle.viewModel.NewsArticleViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_news_article.view.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class NewsArticleFragment : BaseFragment() {
 
     private val newsArticleViewModel: NewsArticleViewModel by viewModels()
+    @Inject
+    lateinit var newsArticleAdapter: NewsArticleAdapter
 
     override val layoutId: Int
         get() = R.layout.fragment_news_article
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadMoviesList()
+        loadNewsArticleList()
     }
 
     /**
@@ -29,6 +34,7 @@ class NewsArticleFragment : BaseFragment() {
      * @param view
      */
     override fun initializePresenter(view: View) {
+        view.rvNewsArticle.adapter = newsArticleAdapter
         subscribeUI(view)
     }
 
@@ -53,14 +59,12 @@ class NewsArticleFragment : BaseFragment() {
                 }
             }
             getNewsArticle.observe(viewLifecycleOwner) {
-
+                newsArticleAdapter.listItem = it
             }
         }
     }
 
-    private fun loadMoviesList() {
-//        emptyView.invisible()
-//        movieList.visible()
+    private fun loadNewsArticleList() {
         newsArticleViewModel.loadNewsArticle(7)
     }
 }

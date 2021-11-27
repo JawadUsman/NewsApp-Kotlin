@@ -37,5 +37,5 @@ data class NewsEntity(
     val url: String
 ) {
     fun toNewsList() =
-        NewsArticle(title, abstractValue, adx_keywords, published_date, byline, source, url, media)
+        NewsArticle(id, title, abstractValue, adx_keywords, published_date, byline, source, url, media)
 }

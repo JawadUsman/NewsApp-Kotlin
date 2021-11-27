@@ -1,7 +1,10 @@
 package com.android.newsapp.presentation
 
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.annotation.LayoutRes
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
@@ -34,3 +37,6 @@ fun View.visible() {
 fun View.invisible() {
     this.visibility = View.GONE
 }
+
+fun ViewGroup.inflate(@LayoutRes layoutRes: Int): View =
+    LayoutInflater.from(context).inflate(layoutRes, this, false)
