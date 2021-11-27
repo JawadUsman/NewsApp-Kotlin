@@ -1,7 +1,9 @@
 package com.android.newsapp.presentation.newsArticle
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toolbar
 import androidx.fragment.app.viewModels
 import com.android.newsapp.R
 import com.android.newsapp.presentation.base.BaseFragment
@@ -12,6 +14,7 @@ import com.android.newsapp.presentation.visible
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_news_article.view.*
 import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class NewsArticleFragment : BaseFragment() {
@@ -37,8 +40,32 @@ class NewsArticleFragment : BaseFragment() {
      * @param view
      */
     override fun initializePresenter(view: View) {
+        setToolbarMenu(view)
         view.rvNewsArticle.adapter = newsArticleAdapter
         subscribeUI(view)
+    }
+
+    private fun setToolbarMenu(view: View) {
+        view.tbNewsAgent.inflateMenu(R.menu.news_article_menu)
+        view.tbNewsAgent.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener {
+            override fun onMenuItemClick(item: MenuItem): Boolean {
+                when (item.itemId) {
+                    R.id.popularRecent -> {
+                        newsArticleViewModel.loadNewsArticle(1)
+                        return true
+                    }
+                    R.id.popularLastSeven -> {
+                        newsArticleViewModel.loadNewsArticle(7)
+                        return true
+                    }
+                    R.id.popularThirty -> {
+                        newsArticleViewModel.loadNewsArticle(30)
+                        return true
+                    }
+                }
+                return false
+            }
+        })
     }
 
     /**
