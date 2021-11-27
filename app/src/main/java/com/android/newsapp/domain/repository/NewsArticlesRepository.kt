@@ -1,5 +1,6 @@
 package com.android.newsapp.domain.repository
 
+import com.android.newsapp.BuildConfig
 import com.android.newsapp.data.remote.dataSource.NewsDataSource
 import com.android.newsapp.data.remote.helper.APIResult
 import com.android.newsapp.domain.model.NewsArticle
@@ -23,7 +24,7 @@ class NewsArticlesRepository @Inject constructor(private val newsDataSource: New
      */
     suspend fun getNewsArticle(period: Int): APIResult<List<NewsArticle>> {
         return try {
-            val response = newsDataSource.geNewsList("KKUW6dh8QfamdxW5CUckOGu3q1QViDif", period)
+            val response = newsDataSource.geNewsList(BuildConfig.NY_API_KEY, period)
             if (response.status == APIResult.Status.SUCCESS) {
                 response.data?.let { currencyList ->
                     val newsArticleList: List<NewsArticle> = currencyList.results.map {

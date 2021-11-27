@@ -39,6 +39,7 @@ android {
     productFlavors {
         qa {
             buildConfigField "String", "API_BASE_URL", '"http://api.nytimes.com/"'
+            buildConfigField "String", "NY_API_KEY", '"KKUW6dh8QfamdxW5CUckOGu3q1QViDif"'
         }
     }
 }

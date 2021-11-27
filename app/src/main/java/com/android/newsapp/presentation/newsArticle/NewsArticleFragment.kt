@@ -15,7 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_news_article.view.*
 import javax.inject.Inject
 
-
 @AndroidEntryPoint
 class NewsArticleFragment : BaseFragment() {
 
@@ -107,6 +106,9 @@ class NewsArticleFragment : BaseFragment() {
         }
     }
 
+    /**
+     * load new article list
+     */
     private fun loadNewsArticleList() {
         newsArticleViewModel.loadNewsArticle(7)
     }
